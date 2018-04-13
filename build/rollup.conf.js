@@ -13,11 +13,11 @@ export default {
       format: 'umd',
       name: 'VueMask',
       exports: 'named',
-      file: 'dist/v-mask.js',
+      file: 'dist/vue-inputmasked.js',
     },
     {
       format: 'es',
-      file: 'dist/v-mask.esm.js',
+      file: 'dist/vue-inputmasked.esm.js',
     },
   ],
 }

@@ -1,9 +1,3 @@
-(function (global, factory) {
-	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
-	typeof define === 'function' && define.amd ? define(['exports'], factory) :
-	(factory((global.VueMask = {})));
-}(this, (function (exports) { 'use strict';
-
 function format (data, mask) {
   if (!mask) return data;
 
@@ -17,28 +11,11 @@ function format (data, mask) {
 
   var cOffset = 0;
 
-  for (var i = 0; i < mask.length; i += 1) {
+  for (var i = 0, x = 1; x && i < mask.length; i += 1) {
+    var c = data.charAt(i - cOffset);
     var m = mask.charAt(i);
-    switch (m) {
-      case '#':
-        break;
-      case 'A':
-        break;
-      case '?':
-        break;
-      case 'N':
-        break;
-      case 'X':
-        break;
-      default:
-        data = data.replace(m, '');
-    }
-  }
-  for (var _i = 0, x = 1; x && _i < mask.length; _i += 1) {
-    var c = data.charAt(_i - cOffset);
-    var _m = mask.charAt(_i);
 
-    switch (_m) {
+    switch (m) {
       case '#':
         /\d/.test(c) ? text += c : x = 0;
         break;
@@ -56,9 +33,9 @@ function format (data, mask) {
         text += c;
         break;
       default:
-        text += _m;
+        text += m;
 
-        if (c && c !== _m) {
+        if (c && c !== m) {
           data = ' ' + data;
         }
 
@@ -132,10 +109,5 @@ var plugin = (function (Vue) {
   Vue.directive('mask', directive);
 });
 
-exports.default = plugin;
-exports.VueMaskPlugin = plugin;
-exports.VueMaskDirective = directive;
-
-Object.defineProperty(exports, '__esModule', { value: true });
-
-})));
+export default plugin;
+export { plugin as VueMaskPlugin, directive as VueMaskDirective };

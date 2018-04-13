@@ -23,24 +23,6 @@ export default function (data, mask) {
   // Adds a char offset to allow testing on optional values
   let cOffset = 0;
 
-  // Cleans data to  avoid value loss on dynamic mask changing
-  for (let i = 0; i < mask.length; i += 1) {
-    const m = mask.charAt(i);
-    switch (m) {
-      case '#':
-        break;
-      case 'A':
-        break;
-      case '?':
-        break;
-      case 'N':
-        break;
-      case 'X':
-        break;
-      default:
-        data = data.replace(m, '');
-    }
-  }
   for (let i = 0, x = 1; x && i < mask.length; i += 1) {
     // Uses the optional mask character offset
     const c = data.charAt(i - cOffset);
