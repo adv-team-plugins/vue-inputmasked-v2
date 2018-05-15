@@ -12,6 +12,8 @@ export default function (data, mask) {
   // don't do anything if mask is undefined/null/etc
   if (!mask) return data;
 
+  data = data.replace(/ /g, '');
+
   const maskStartRegExp = /^([^#ANX]+)/;
 
   if (+data.length === 1 && maskStartRegExp.test(mask)) {

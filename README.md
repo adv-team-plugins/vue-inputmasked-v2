@@ -1,7 +1,7 @@
 ## :cd: Installation
 
 ```sh
-npm i vue-inputmasked
+npm i vue-inputmasked-2
 ```
 
 ## Initialization

@@ -1,6 +1,6 @@
 {
-  "name": "vue-inputmasked",
-  "version": "1.3.2",
+  "name": "vue-inputmasked-v2",
+  "version": "1.3.5",
   "description": "Super tiny input mask library for Vue.js based on PureMask.js (~2kb) exposed as directive. No dependencies",
   "main": "dist/vue-inputmasked.js",
   "module": "dist/vue-inputmasked.esm.js",
@@ -16,16 +16,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pma87/vue-inputmasked.git"
+    "url": "git+https://github.com/adv-team-plugins/vue-inputmasked-v2.git"
   },
   "keywords": [
     "vue.js",
     "vue",
     "vue-mask"
   ],
-  "author": "Max Lyashuk <pma987@gmail.com>",
+  "author": "Popov Alexej <info@jdjiwi.ru>",
   "license": "MIT",
-  "homepage": "https://github.com/pma87/vue-inputmasked.git#readme",
+  "homepage": "https://github.com/adv-team-plugins/vue-inputmasked-v2#readme",
   "devDependencies": {
     "@vue/test-utils": "1.0.0-beta.13",
     "babel-plugin-transform-runtime": "6.23.0",

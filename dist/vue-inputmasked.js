@@ -7,6 +7,8 @@
   function format (data, mask) {
     if (!mask) return data;
 
+    data = data.replace(/ /g, '');
+
     var maskStartRegExp = /^([^#ANX]+)/;
 
     if (+data.length === 1 && maskStartRegExp.test(mask)) {
